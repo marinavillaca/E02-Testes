@@ -1,10 +1,9 @@
 package test;
 
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import queue.Queue;
-
-import static org.junit.Assert.*;
+import queue.Queue; 
 
 public class QueueTest {
 

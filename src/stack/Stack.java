@@ -6,32 +6,47 @@ import java.util.List;
 public class Stack<Trem> {
 
     private List<Trem> vetor;
-    private int topo;
+    private int tamanho;
 
-    public Stack (){
-        this.vetor = new ArrayList<Trem>();
-        this.topo = 0;
-    }
-
-    public void empilhar(Trem x) {
-        this.vetor.add(x);
-        this.topo++;
-    }
-
-    public Trem desempilhar() throws Exception {
-        if(this.estaVazia()) {
-            return null;
-        }
-
-        return this.vetor.get(this.topo);
+    public int tamanho() {
+        return tamanho;
     }
 
     public boolean estaVazia() {
-        return this.vetor.isEmpty();
+        return (tamanho == 0);
     }
 
-    public int tamanho() {
-        return this.vetor.size();
+    public Stack() {
+        this.vetor = new ArrayList<Trem>();
+        this.tamanho = 0;
+    }
+
+    public void empilhar(Trem x) {
+        vetor.add(x);
+        this.tamanho++;
+    }
+
+    public Trem desempilhar() throws Exception {
+        if (this.estaVazia()) {
+            throw new Exception("A pilha está vazia");
+        }
+        this.tamanho--;
+        return this.vetor.remove(this.tamanho);
+    }
+    
+    public boolean isEmpty() {
+        return estaVazia();
+    }
+
+    public int size() {
+        return tamanho();
+    }
+
+    public void push(Trem item) {
+        empilhar(item);
+    }
+
+    public Trem pop() throws Exception {
+        return desempilhar();
     }
 }
-
