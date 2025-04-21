@@ -1,6 +1,6 @@
 # Exercício: Testes de Unidade
 
-Professor: João Eduardo Montandon
+Professor: Márcio Júnior Nunes
 
 **Objetivo: Nesta lista, você irá experimentar o uso da ferarmenta jUnit para implementação de testes de unidade em Java.**
 
